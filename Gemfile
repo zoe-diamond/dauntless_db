@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '>= 3.1'
 
 gem 'rails', '~> 7.1.0'
-gem 'puma', '~> 6.0'
+gem 'webrick'
 gem 'sprockets-rails'
 gem 'sassc-rails'
 gem 'turbolinks', '~> 5'
