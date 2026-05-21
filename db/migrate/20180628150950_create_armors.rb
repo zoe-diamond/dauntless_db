@@ -10,7 +10,7 @@ class CreateArmors < ActiveRecord::Migration[5.2]
       t.belongs_to :elemental_resistance
       t.belongs_to :elemental_weakness
       t.belongs_to :perk
-      t.timestamp
+      t.timestamps
     end
   end
 end

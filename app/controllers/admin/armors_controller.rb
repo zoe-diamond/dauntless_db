@@ -13,7 +13,7 @@ module Admin
       if @armor.save
         redirect_to admin_armor_path(@armor), notice: "Armor was successfully created."
       else
-        render :new
+        render :new, status: :unprocessable_entity
       end
     end
 
@@ -26,7 +26,7 @@ module Admin
       if @armor.update(armor_params)
         redirect_to admin_armor_path(@armor), notice: "Armor was successfully updated."
       else
-        render :edit
+        render :edit, status: :unprocessable_entity
       end
     end
 

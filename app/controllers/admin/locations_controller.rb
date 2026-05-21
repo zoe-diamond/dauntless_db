@@ -28,7 +28,7 @@ module Admin
         if @location.update(locations_params)
           redirect_to admin_locations_path
         else
-          render :edit
+          render :edit, status: :unprocessable_entity
         end
     end
 

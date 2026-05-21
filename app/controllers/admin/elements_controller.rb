@@ -22,7 +22,7 @@ module Admin
       if @element.update(admin_elements_params)
         redirect_to admin_element_path(@element), notice: 'Element was succesfully updated'
       else
-        render :edit
+        render :edit, status: :unprocessable_entity
       end
 
     end
@@ -32,7 +32,7 @@ module Admin
       if @element.save
         redirect_to admin_elements_path, notice: 'Element was successfully updated'
       else 
-        render :new
+        render :new, status: :unprocessable_entity
       end
     end
 

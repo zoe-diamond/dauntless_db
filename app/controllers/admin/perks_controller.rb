@@ -27,7 +27,7 @@ module Admin
       if @perk.update(perks_params)
         redirect_to admin_perks_path
       else
-        render :edit
+        render :edit, status: :unprocessable_entity
       end
     end
 
@@ -36,7 +36,7 @@ module Admin
       if @perk.save
         redirect_to admin_perks_path
       else
-        render :new
+        render :new, status: :unprocessable_entity
       end
     end
 

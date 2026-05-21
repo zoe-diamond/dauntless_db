@@ -13,7 +13,7 @@ module Admin
       if @reagent.save
         redirect_to admin_reagent_path(@reagent), notice: "Reagent was successfully created."
       else
-        render :new
+        render :new, status: :unprocessable_entity
       end
     end
 
@@ -26,7 +26,7 @@ module Admin
       if @reagent.update(reagent_params)
         redirect_to admin_reagent_path(@reagent), notice: "Reagent was successfully updated."
       else
-        render :edit
+        render :edit, status: :unprocessable_entity
       end
     end
 

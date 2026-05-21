@@ -13,7 +13,7 @@ module Admin
       if @weapon.save
         redirect_to admin_weapon_path(@weapon), notice: 'Weapon was successfully created'
       else
-        render :new
+        render :new, status: :unprocessable_entity
       end
     end
 
@@ -26,7 +26,7 @@ module Admin
       if @weapon.update(weapon_params)
         redirect_to admin_weapon_path(@weapon), notice: 'Weapon was succesfully updated'
       else
-        render :edit
+        render :edit, status: :unprocessable_entity
       end
     end
 

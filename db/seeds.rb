@@ -5,7 +5,7 @@ Element.find_or_create_by(name: 'Shock')
 Element.find_or_create_by(name: 'Umbral')
 
 20.times do
-  name = Faker::LeagueOfLegends.masteries
+  name = Faker::Games::LeagueOfLegends.masteries
   perk = Perk.find_or_initialize_by(name: name)
   perk.desc = name
   6.times do |i|
@@ -15,11 +15,11 @@ Element.find_or_create_by(name: 'Umbral')
 end
 
 5.times do
-  Location.find_or_create_by(name: Faker::LordOfTheRings.location)
+  Location.find_or_create_by(name: Faker::Movies::LordOfTheRings.location)
 end
 
 30.times do
-  name = Faker::Pokemon.name
+  name = Faker::Games::Pokemon.name
   behemoth = Behemoth.find_or_initialize_by(name: name)
   behemoth.locations << Location.all.sample
   elements = Element.all.shuffle

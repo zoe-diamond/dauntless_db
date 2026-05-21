@@ -1,7 +1,4 @@
 {
   "name": "dauntless_db",
-  "private": true,
-  "dependencies": {
-    "mysql2": "^1.6.1"
-  }
+  "private": true
 }
